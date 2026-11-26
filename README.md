@@ -72,6 +72,7 @@ We are actively partnering with **research institutions, enterprise farms, agrib
 - **Website:** [home.agromareh.org](https://home.agromareh.org)
 - **Email:** [contactus@agromareh.org](mailto:contactus@agromareh.org)
 - **Phone:** [+234 814 123 2871](tel:+2348141232871)
+- **Legal &amp; Governance:** [Legal Center](https://home.agromareh.org/legal/) · [Terms &amp; EULA](https://home.agromareh.org/legal/terms.html) · [Privacy Policy](https://home.agromareh.org/legal/privacy.html) · [AI &amp; Supplier Disclaimer](https://home.agromareh.org/legal/ai-disclaimer.html)
 
 ---
 

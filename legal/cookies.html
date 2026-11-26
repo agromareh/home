@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AgroMareh Cookie & Local Storage Policy — transparent disclosure of strictly necessary security cookies and local browser preferences.">
+  <meta name="theme-color" content="#eef4ea">
+  <link rel="canonical" href="https://home.agromareh.org/legal/cookies.html">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/agromareh-mark.svg">
+  <link rel="apple-touch-icon" href="../assets/images/agromareh-logo.png">
+  <title>Cookie &amp; Local Storage Policy — AgroMareh</title>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("agromareh-theme");
+        var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.dataset.theme = theme;
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/sections.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/legal.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="../" aria-label="AgroMareh home">
+        <img class="brand-logo brand-logo-light" src="../assets/images/agromareh-logo-light.png" alt="AgroMareh" width="142" height="112">
+        <img class="brand-logo brand-logo-dark" src="../assets/images/agromareh-logo-dark.png" alt="AgroMareh" width="142" height="112">
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Legal Center</a>
+        <a href="terms.html">Terms &amp; EULA</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="ai-disclaimer.html">AI Disclaimer</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+        </button>
+        <a class="button" href="../">Back to site</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap legal-hero">
+      <div class="eyebrow">Legal · Browser Storage &amp; Cookies</div>
+      <h1>Cookie &amp; Local Storage Policy</h1>
+      <div class="legal-meta">
+        <span>Effective Date: November 26, 2026</span>
+        <span>Last Updated: November 26, 2026</span>
+        <span>Third-Party Ad Trackers: None</span>
+      </div>
+      <nav class="legal-nav-pills" aria-label="Legal documents">
+        <a href="index.html">All Legal</a>
+        <a href="terms.html">Terms &amp; EULA</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="cookies.html" aria-current="page">Cookie Policy</a>
+        <a href="ai-disclaimer.html">AI &amp; Supplier Disclaimer</a>
+        <a href="acceptable-use.html">Acceptable Use</a>
+      </nav>
+    </section>
+
+    <section class="wrap legal-body">
+      <article class="legal-doc">
+        <div class="legal-callout">
+          <strong>Privacy-First Design</strong>
+          <p><code>home.agromareh.org</code> does <strong>not</strong> use third-party advertising cookies, behavioral profiling pixels, or cross-site trackers. We only use strictly necessary security/session mechanisms and a single local browser preference for Light/Dark mode.</p>
+        </div>
+
+        <h2>1. What Are Cookies &amp; Local Storage?</h2>
+        <p>Cookies are small text files stored by your browser when you visit a website. Local Storage is a browser-side key-value store that remains on your device and is not automatically transmitted on every HTTP request.</p>
+
+        <h2>2. Exact Technologies Used Across AgroMareh</h2>
+        <div class="legal-table-wrap">
+          <table class="legal-table">
+            <thead>
+              <tr>
+                <th>Name / Mechanism</th>
+                <th>Type</th>
+                <th>Platform</th>
+                <th>Purpose &amp; Category</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>agromareh-theme</code></td>
+                <td>Browser <code>localStorage</code></td>
+                <td><code>home.agromareh.org</code></td>
+                <td><strong>Functional / Preference:</strong> Remembers your chosen Light or Dark display theme locally on your device. Never sent to external ad networks.</td>
+              </tr>
+              <tr>
+                <td>Cloudflare Edge Security (e.g., <code>__cf_bm</code>, <code>CF_Authorization</code>)</td>
+                <td>Strictly Necessary Cookie</td>
+                <td>All <code>*.agromareh.org</code> domains (including <code>admin.agromareh.org</code>)</td>
+                <td><strong>Strictly Necessary Security:</strong> Protects AgroMareh infrastructure from DDoS attacks, malicious bots, and unauthorized access to administrative portals.</td>
+              </tr>
+              <tr>
+                <td>Portal Session Tokens</td>
+                <td>Strictly Necessary Cookie / Storage</td>
+                <td><code>app.agromareh.org</code>, <code>supplier.agromareh.org</code></td>
+                <td><strong>Strictly Necessary Authentication:</strong> Keeps signed-in users and onboarding agro suppliers authenticated across pages and protects forms against CSRF attacks.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>3. Consent &amp; Opt-Out</h2>
+        <p>Under EU/UK ePrivacy rules, GDPR, and Nigeria's NDPA 2023, strictly necessary cookies and user-requested UI preferences do not require advertising-style tracking consent. If AgroMareh ever introduces optional analytics or marketing cookies in the future, we will update this policy and request your explicit opt-in consent before setting them.</p>
+
+        <h2>4. Managing Browser Storage</h2>
+        <p>You can clear or block cookies and Local Storage at any time through your browser settings. Note that disabling strictly necessary cookies may prevent sign-in on <code>app.agromareh.org</code>, <code>supplier.agromareh.org</code>, or <code>admin.agromareh.org</code>.</p>
+
+        <h2>5. Contact</h2>
+        <p>Questions about cookies or browser storage? Contact <a href="mailto:contactus@agromareh.org">contactus@agromareh.org</a>.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer">
+      <div class="footer-brand">
+        <img class="brand-logo brand-logo-light" src="../assets/images/agromareh-logo-light.png" alt="AgroMareh" width="96" height="76" loading="lazy" decoding="async">
+        <img class="brand-logo brand-logo-dark" src="../assets/images/agromareh-logo-dark.png" alt="AgroMareh" width="96" height="76" loading="lazy" decoding="async">
+        <span>© 2026 AGRO MAREH TECH</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Legal Center</a>
+        <a href="terms.html">Terms &amp; EULA</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="ai-disclaimer.html">AI Disclaimer</a>
+        <a href="acceptable-use.html">Acceptable Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
