@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="assets/icons/agromareh-mark.svg" alt="AgroMareh" width="64" height="64">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/images/agromareh-logo-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="assets/images/agromareh-logo-light.png">
+    <img src="assets/images/agromareh-logo-light.png" alt="AgroMareh" width="220">
+  </picture>
 </p>
 
 <h1 align="center">AgroMareh</h1>

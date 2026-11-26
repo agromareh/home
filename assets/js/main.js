@@ -136,4 +136,106 @@
       window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
     });
   }
+
+  /* -----------------------------------------------------------------------
+     QR Barcode Generator (Contact Section)
+     ----------------------------------------------------------------------- */
+  const qrInput = document.getElementById("qr-input");
+  const qrOutput = document.getElementById("qr-output");
+  const qrCaptionUrl = document.getElementById("qr-caption-url");
+  const qrStatus = document.getElementById("qr-status");
+  const qrDownloadPng = document.getElementById("qr-download-png");
+  const qrDownloadSvg = document.getElementById("qr-download-svg");
+  const qrCopyUrl = document.getElementById("qr-copy-url");
+  const qrPresets = document.querySelectorAll("[data-qr-preset]");
+
+  if (qrInput && qrOutput && window.AgroMarehQR) {
+    const DEFAULT_URL = "https://home.agromareh.org";
+    let currentQr = null;
+    let currentValue = DEFAULT_URL;
+
+    function syncPresetState(value) {
+      qrPresets.forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.qrPreset === value);
+      });
+    }
+
+    function renderQr(rawValue) {
+      const value = (rawValue || "").trim() || DEFAULT_URL;
+      try {
+        currentQr = window.AgroMarehQR.encode(value);
+        currentValue = value;
+        qrOutput.innerHTML = window.AgroMarehQR.toSvg(currentQr, {
+          quietZone: 4,
+          darkColor: "#102d22",
+          lightColor: "#ffffff",
+          label: `QR code linking to ${value}`,
+        });
+        if (qrCaptionUrl) qrCaptionUrl.textContent = value;
+        if (qrStatus) qrStatus.textContent = "";
+        syncPresetState(value);
+      } catch (err) {
+        if (qrStatus) qrStatus.textContent = err.message || "Unable to encode this URL.";
+      }
+    }
+
+    qrInput.addEventListener("input", () => renderQr(qrInput.value));
+
+    qrPresets.forEach((button) => {
+      button.addEventListener("click", () => {
+        const target = button.dataset.qrPreset || DEFAULT_URL;
+        qrInput.value = target;
+        renderQr(target);
+      });
+    });
+
+    if (qrDownloadSvg) {
+      qrDownloadSvg.addEventListener("click", () => {
+        if (!currentQr) return;
+        const svg = window.AgroMarehQR.toSvg(currentQr, {
+          quietZone: 4,
+          darkColor: "#102d22",
+          lightColor: "#ffffff",
+          label: `QR code linking to ${currentValue}`,
+        });
+        const blob = new Blob([svg], { type: "image/svg+xml;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "agromareh-qr.svg";
+        link.click();
+        URL.revokeObjectURL(url);
+      });
+    }
+
+    if (qrDownloadPng) {
+      qrDownloadPng.addEventListener("click", () => {
+        if (!currentQr) return;
+        const canvas = document.createElement("canvas");
+        window.AgroMarehQR.drawToCanvas(currentQr, canvas, {
+          quietZone: 4,
+          darkColor: "#102d22",
+          lightColor: "#ffffff",
+          pixelSize: 1024,
+        });
+        const link = document.createElement("a");
+        link.href = canvas.toDataURL("image/png");
+        link.download = "agromareh-qr.png";
+        link.click();
+      });
+    }
+
+    if (qrCopyUrl) {
+      qrCopyUrl.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(currentValue);
+          if (qrStatus) qrStatus.textContent = "Link copied to clipboard.";
+        } catch {
+          if (qrStatus) qrStatus.textContent = currentValue;
+        }
+      });
+    }
+
+    renderQr(qrInput.value || DEFAULT_URL);
+  }
 })();

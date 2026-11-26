@@ -9,8 +9,12 @@
   <meta property="og:url" content="https://home.agromareh.org/">
   <meta property="og:title" content="AgroMareh — Crop health, made actionable">
   <meta property="og:description" content="Turn a field photo into a clear diagnosis, practical next steps and a growing record of crop health — all in one simple workflow.">
+  <meta property="og:image" content="https://home.agromareh.org/assets/images/agromareh-logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://home.agromareh.org/assets/images/agromareh-logo.png">
   <link rel="canonical" href="https://home.agromareh.org/">
   <link rel="icon" type="image/svg+xml" href="assets/icons/agromareh-mark.svg">
+  <link rel="apple-touch-icon" href="assets/images/agromareh-logo.png">
   <title>AgroMareh — Crop health, made actionable</title>
   <script>
     (function () {
@@ -32,14 +36,15 @@
   <header class="site-header">
     <div class="wrap nav">
       <a class="brand" href="#" aria-label="AgroMareh home">
-        <img src="assets/icons/agromareh-mark.svg" alt="" width="36" height="36">
-        <span>AgroMareh</span>
+        <img class="brand-logo brand-logo-light" src="assets/images/agromareh-logo-light.png" alt="AgroMareh" width="142" height="112">
+        <img class="brand-logo brand-logo-dark" src="assets/images/agromareh-logo-dark.png" alt="AgroMareh" width="142" height="112">
       </a>
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#platform">Platform</a>
         <a href="#how">How it works</a>
         <a href="#institutions">Institutions</a>
         <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </nav>
       <div class="nav-actions">
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
@@ -307,11 +312,61 @@
         </div>
       </div>
     </section>
+
+    <section id="contact" class="section section-soft">
+      <div class="wrap contact-grid">
+        <div class="contact-copy">
+          <div class="eyebrow">Contact &amp; instant share</div>
+          <h2>Scan to open AgroMareh on any phone.</h2>
+          <p>Point any phone camera at the QR code to jump straight to this page, or generate a custom scannable code for pilots, field teams, and institutional decks.</p>
+
+          <div class="contact-details">
+            <a class="contact-chip" href="mailto:agromareh@gmail.com">
+              <small>Email</small>
+              <strong>agromareh@gmail.com</strong>
+            </a>
+            <a class="contact-chip" href="tel:+2348141232871">
+              <small>Phone</small>
+              <strong>+234 814 123 2871</strong>
+            </a>
+          </div>
+
+          <div class="qr-controls">
+            <label for="qr-input">Destination URL</label>
+            <input id="qr-input" class="qr-input" type="url" value="https://home.agromareh.org" placeholder="https://home.agromareh.org" autocomplete="off" spellcheck="false">
+            <div class="qr-presets" role="group" aria-label="Quick URL presets">
+              <button class="preset-pill active" type="button" data-qr-preset="https://home.agromareh.org">This page</button>
+              <button class="preset-pill" type="button" data-qr-preset="https://agromareh.org">agromareh.org</button>
+              <button class="preset-pill" type="button" data-qr-preset="https://app.agromareh.org">App portal</button>
+              <button class="preset-pill" type="button" data-qr-preset="mailto:agromareh@gmail.com">Email us</button>
+            </div>
+            <p class="qr-status" id="qr-status" aria-live="polite"></p>
+          </div>
+        </div>
+
+        <div class="qr-card">
+          <div class="qr-frame" id="qr-output" aria-label="Scannable QR code for AgroMareh"></div>
+          <div class="qr-caption">
+            <strong id="qr-caption-url">https://home.agromareh.org</strong>
+            <span>Open your phone camera and point at the code to visit instantly.</span>
+          </div>
+          <div class="qr-actions">
+            <button class="button" type="button" id="qr-download-png">Download PNG</button>
+            <button class="button button-light" type="button" id="qr-download-svg">SVG</button>
+            <button class="button button-light" type="button" id="qr-copy-url">Copy link</button>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
     <div class="wrap footer">
-      <div>© 2026 AGRO MAREH TECH</div>
+      <div class="footer-brand">
+        <img class="brand-logo brand-logo-light" src="assets/images/agromareh-logo-light.png" alt="AgroMareh" width="96" height="76" loading="lazy" decoding="async">
+        <img class="brand-logo brand-logo-dark" src="assets/images/agromareh-logo-dark.png" alt="AgroMareh" width="96" height="76" loading="lazy" decoding="async">
+        <span>© 2026 AGRO MAREH TECH</span>
+      </div>
       <div class="footer-links">
         <a href="mailto:agromareh@gmail.com">agromareh@gmail.com</a>
         <a href="tel:+2348141232871">+234 814 123 2871</a>
@@ -349,6 +404,7 @@
     </div>
   </div>
 
+  <script src="assets/js/qr.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>
