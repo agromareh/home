@@ -1,0 +1,41 @@
+/* ==========================================================================
+   Design Tokens — AgroMareh
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* Brand & surface colors */
+  --ink: #173a2d;
+  --ink-deep: #102d22;
+  --green: #286547;
+  --green-soft: #e7efe6;
+  --green-accent: #79a45c;
+  --lime: #d9eea8;
+  --lime-hover: #cbe48c;
+  --paper: #f7f8f2;
+  --surface-soft: #edf2e8;
+  --surface-card: #fbfcf8;
+  --white: #ffffff;
+
+  /* Text & border colors */
+  --muted: #68776d;
+  --muted-dark: #c0cdc2;
+  --nav-text: #53675b;
+  --subtle-text: #718075;
+  --line: #e2e7dc;
+  --line-card: #e5e9e0;
+  --line-dark: rgb(255 255 255 / 14%);
+
+  /* Typography */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+
+  /* Elevation & radii */
+  --shadow: 0 20px 55px rgb(32 62 42 / 12%);
+  --shadow-card: 0 12px 35px rgb(29 60 38 / 13%);
+  --shadow-screen: 0 30px 70px rgb(37 68 44 / 23%);
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-gutter: 48px;
+}

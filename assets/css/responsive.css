@@ -1,0 +1,265 @@
+/* ==========================================================================
+   Responsive Breakpoints & Motion Preferences
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .nav-links {
+    gap: 18px;
+  }
+
+  .hero {
+    min-height: auto;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 28px;
+    padding-block: 60px;
+  }
+
+  .hero-art {
+    min-height: 500px;
+  }
+
+  .section {
+    padding-block: 80px;
+  }
+
+  .feature-grid,
+  .proof-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .showcase,
+  .process,
+  .audience-layout {
+    gap: 48px;
+  }
+
+  .showcase-art {
+    min-height: 470px;
+  }
+}
+
+@media (max-width: 680px) {
+  .wrap {
+    width: min(100% - 36px, 520px);
+  }
+
+  .nav {
+    min-height: 68px;
+  }
+
+  .brand {
+    font-size: 18px;
+  }
+
+  .brand img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav > .button {
+    min-height: 42px;
+    padding-inline: 15px;
+    font-size: 12px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-block: 52px 64px;
+  }
+
+  .hero h1 {
+    max-width: 530px;
+    font-size: clamp(46px, 13vw, 68px);
+  }
+
+  .hero-copy {
+    font-size: 16px;
+  }
+
+  .hero-art {
+    min-height: 490px;
+    border-radius: 28px;
+  }
+
+  .hero-screen {
+    width: 245px;
+  }
+
+  .floating-diagnosis {
+    right: 10px;
+    bottom: 42px;
+  }
+
+  .floating-ai {
+    top: 32px;
+    left: 10px;
+  }
+
+  .section {
+    padding-block: 68px;
+  }
+
+  .section-head {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .section-head p {
+    margin-top: 16px;
+  }
+
+  .feature-grid,
+  .proof-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .feature-card {
+    min-height: 205px;
+    padding: 18px;
+  }
+
+  .feature-card h3 {
+    margin-top: 24px;
+    font-size: 18px;
+  }
+
+  .feature-card p {
+    font-size: 12px;
+  }
+
+  .showcase,
+  .process,
+  .audience-layout {
+    grid-template-columns: 1fr;
+    gap: 33px;
+  }
+
+  .showcase-art {
+    min-height: 460px;
+  }
+
+  .diagnosis-screen {
+    right: 17%;
+    width: 220px;
+  }
+
+  .secondary-screen {
+    right: 1%;
+    width: 155px;
+  }
+
+  .showcase-note {
+    bottom: 27px;
+    left: 14px;
+    max-width: 185px;
+  }
+
+  .stats {
+    gap: 7px;
+  }
+
+  .stat {
+    padding: 12px 9px;
+  }
+
+  .stat strong {
+    font-size: 22px;
+  }
+
+  .stat span {
+    font-size: 9px;
+  }
+
+  .audience-grid {
+    gap: 9px;
+  }
+
+  .audience-card {
+    min-height: 160px;
+    padding: 17px;
+  }
+
+  .proof-card {
+    min-height: 165px;
+    padding: 18px;
+  }
+
+  .proof-card h3 {
+    margin-top: 23px;
+    font-size: 16px;
+  }
+
+  .cta {
+    padding-block: 56px;
+  }
+
+  .cta-box {
+    display: grid;
+    padding: 30px 24px;
+  }
+
+  .cta-box .button {
+    justify-self: start;
+  }
+
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer-links {
+    gap: 10px 17px;
+  }
+}
+
+@media (max-width: 390px) {
+  .feature-grid,
+  .proof-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card,
+  .proof-card {
+    min-height: auto;
+  }
+
+  .feature-card h3,
+  .proof-card h3 {
+    margin-top: 18px;
+  }
+
+  .hero-art {
+    min-height: 445px;
+  }
+
+  .hero-screen {
+    width: 220px;
+  }
+
+  .floating-diagnosis {
+    right: 7px;
+    bottom: 30px;
+  }
+
+  .audience-card {
+    min-height: 173px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
