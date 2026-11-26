@@ -1,41 +1,187 @@
 /* ==========================================================================
    Design Tokens — AgroMareh
+   Light Mode: Liquid Glass UI
+   Dark Mode:  Deep Botanical Obsidian Glass
    ========================================================================== */
 
-:root {
+:root,
+[data-theme="light"] {
   color-scheme: light;
 
-  /* Brand & surface colors */
-  --ink: #173a2d;
-  --ink-deep: #102d22;
-  --green: #286547;
-  --green-soft: #e7efe6;
+  /* Core brand & text */
+  --ink: #143628;
+  --ink-deep: #0d271d;
+  --green: #246144;
+  --green-soft: rgb(225 240 225 / 72%);
   --green-accent: #79a45c;
   --lime: #d9eea8;
   --lime-hover: #cbe48c;
-  --paper: #f7f8f2;
-  --surface-soft: #edf2e8;
-  --surface-card: #fbfcf8;
   --white: #ffffff;
 
-  /* Text & border colors */
-  --muted: #68776d;
-  --muted-dark: #c0cdc2;
-  --nav-text: #53675b;
-  --subtle-text: #718075;
-  --line: #e2e7dc;
-  --line-card: #e5e9e0;
+  /* Text tokens */
+  --muted: #52665b;
+  --muted-dark: #c4d3c7;
+  --nav-text: #3e5549;
+  --subtle-text: #5b6e63;
+
+  /* Page canvas & section surfaces */
+  --page-bg:
+    radial-gradient(circle at 12% 8%, rgb(217 238 168 / 55%) 0%, transparent 42%),
+    radial-gradient(circle at 88% 16%, rgb(164 214 185 / 38%) 0%, transparent 46%),
+    radial-gradient(circle at 72% 62%, rgb(217 238 168 / 32%) 0%, transparent 48%),
+    linear-gradient(180deg, #eef4ea 0%, #f5f8f1 48%, #ebf2e6 100%);
+  --section-soft-bg:
+    radial-gradient(circle at 18% 20%, rgb(217 238 168 / 42%), transparent 45%),
+    radial-gradient(circle at 85% 80%, rgb(176 218 194 / 30%), transparent 45%),
+    rgb(233 242 229 / 68%);
+  --section-white-bg: rgb(255 255 255 / 44%);
+  --section-dark-bg:
+    radial-gradient(circle at 15% 15%, rgb(48 118 82 / 34%), transparent 45%),
+    radial-gradient(circle at 85% 85%, rgb(217 238 168 / 12%), transparent 42%),
+    #0e291f;
+
+  /* Liquid Glass materials */
+  --glass-bg: linear-gradient(145deg, rgb(255 255 255 / 74%), rgb(245 250 242 / 46%));
+  --glass-bg-strong: linear-gradient(145deg, rgb(255 255 255 / 86%), rgb(246 251 244 / 64%));
+  --glass-bg-hover: linear-gradient(145deg, rgb(255 255 255 / 88%), rgb(236 247 233 / 66%));
+  --glass-header-bg: linear-gradient(180deg, rgb(250 253 248 / 76%), rgb(242 248 239 / 62%));
+  --glass-border: rgb(255 255 255 / 78%);
+  --glass-border-subtle: rgb(20 54 40 / 10%);
+  --glass-specular: inset 0 1px 0 rgb(255 255 255 / 92%), inset 0 -1px 0 rgb(20 54 40 / 4%);
+  --glass-blur: blur(22px) saturate(185%);
+  --glass-shadow: 0 16px 40px rgb(22 52 36 / 10%), 0 2px 8px rgb(22 52 36 / 5%);
+  --glass-shadow-hover: 0 22px 52px rgb(22 52 36 / 14%), 0 4px 12px rgb(22 52 36 / 7%);
+
+  /* Art & showcase frames */
+  --hero-art-bg:
+    radial-gradient(ellipse at 76% 14%, rgb(217 238 168 / 92%), transparent 44%),
+    radial-gradient(ellipse at 18% 84%, rgb(164 214 185 / 55%), transparent 48%),
+    linear-gradient(150deg, rgb(255 255 255 / 66%), rgb(220 236 218 / 58%) 65%, rgb(239 246 234 / 72%));
+  --showcase-art-bg:
+    radial-gradient(circle at 80% 18%, rgb(217 238 168 / 52%), transparent 45%),
+    linear-gradient(145deg, rgb(225 238 219 / 72%), rgb(247 251 244 / 62%));
+  --art-ring: rgb(40 101 71 / 12%);
+  --bezel-color: rgb(255 255 255 / 92%);
+
+  /* Dark-section card glass */
+  --dark-card-bg: linear-gradient(145deg, rgb(255 255 255 / 9%), rgb(255 255 255 / 3%));
+  --dark-card-border: rgb(255 255 255 / 16%);
+  --dark-card-specular: inset 0 1px 0 rgb(255 255 255 / 18%);
+  --line: rgb(20 54 40 / 12%);
   --line-dark: rgb(255 255 255 / 14%);
 
-  /* Typography */
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+  /* Buttons */
+  --btn-primary-bg: linear-gradient(145deg, #1a4735, #102e22);
+  --btn-primary-hover: linear-gradient(145deg, #2b6e4e, #1d5139);
+  --btn-primary-text: #ffffff;
+  --btn-primary-shadow: 0 10px 24px rgb(16 46 34 / 22%), inset 0 1px 0 rgb(255 255 255 / 20%);
 
-  /* Elevation & radii */
-  --shadow: 0 20px 55px rgb(32 62 42 / 12%);
-  --shadow-card: 0 12px 35px rgb(29 60 38 / 13%);
-  --shadow-screen: 0 30px 70px rgb(37 68 44 / 23%);
+  /* CTA box */
+  --cta-bg:
+    radial-gradient(circle at 85% 15%, rgb(255 255 255 / 55%), transparent 45%),
+    linear-gradient(135deg, rgb(217 238 168 / 84%), rgb(198 228 144 / 74%));
+  --cta-border: rgb(255 255 255 / 78%);
+  --cta-eyebrow: #355427;
+  --cta-heading: #0d271d;
+
+  /* Modal & inputs */
+  --modal-backdrop: rgb(12 30 22 / 46%);
+  --input-bg: rgb(255 255 255 / 76%);
+  --input-border: rgb(20 54 40 / 16%);
+  --check-bg: rgb(217 238 168 / 65%);
+
+  /* Typography & elevation */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+  --shadow: 0 20px 55px rgb(24 56 38 / 14%);
+  --shadow-screen: 0 30px 70px rgb(27 58 38 / 22%);
 
   /* Layout */
   --container-max: 1200px;
   --container-gutter: 48px;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Core brand & text */
+  --ink: #e8f1eb;
+  --ink-deep: #f4faf5;
+  --green: #9ad88c;
+  --green-soft: rgb(154 216 140 / 14%);
+  --green-accent: #b8e38c;
+  --lime: #d9eea8;
+  --lime-hover: #e5f5be;
+  --white: #ffffff;
+
+  /* Text tokens */
+  --muted: #9eb3a6;
+  --muted-dark: #a6bbb0;
+  --nav-text: #bfd0c5;
+  --subtle-text: #8da396;
+
+  /* Page canvas & section surfaces */
+  --page-bg:
+    radial-gradient(circle at 12% 8%, rgb(40 107 74 / 28%) 0%, transparent 42%),
+    radial-gradient(circle at 86% 18%, rgb(217 238 168 / 10%) 0%, transparent 40%),
+    linear-gradient(180deg, #07140f 0%, #0a1b14 50%, #07130e 100%);
+  --section-soft-bg:
+    radial-gradient(circle at 20% 20%, rgb(42 110 76 / 20%), transparent 45%),
+    rgb(13 33 25 / 72%);
+  --section-white-bg: rgb(10 26 20 / 60%);
+  --section-dark-bg:
+    radial-gradient(circle at 15% 15%, rgb(46 115 80 / 22%), transparent 45%),
+    #050e0a;
+
+  /* Dark Obsidian Glass materials */
+  --glass-bg: linear-gradient(145deg, rgb(20 48 37 / 72%), rgb(11 29 22 / 64%));
+  --glass-bg-strong: linear-gradient(145deg, rgb(22 52 40 / 88%), rgb(12 31 24 / 82%));
+  --glass-bg-hover: linear-gradient(145deg, rgb(28 64 49 / 82%), rgb(15 38 29 / 74%));
+  --glass-header-bg: linear-gradient(180deg, rgb(8 22 16 / 82%), rgb(8 22 16 / 68%));
+  --glass-border: rgb(217 238 168 / 15%);
+  --glass-border-subtle: rgb(255 255 255 / 8%);
+  --glass-specular: inset 0 1px 0 rgb(255 255 255 / 12%), inset 0 -1px 0 rgb(0 0 0 / 28%);
+  --glass-blur: blur(22px) saturate(155%);
+  --glass-shadow: 0 18px 44px rgb(0 0 0 / 34%), 0 2px 10px rgb(0 0 0 / 22%);
+  --glass-shadow-hover: 0 24px 56px rgb(0 0 0 / 44%), 0 4px 14px rgb(0 0 0 / 28%);
+
+  /* Art & showcase frames */
+  --hero-art-bg:
+    radial-gradient(ellipse at 76% 14%, rgb(217 238 168 / 24%), transparent 46%),
+    radial-gradient(ellipse at 18% 84%, rgb(40 108 75 / 36%), transparent 50%),
+    linear-gradient(150deg, rgb(18 45 34 / 84%), rgb(10 28 21 / 88%));
+  --showcase-art-bg:
+    radial-gradient(circle at 80% 18%, rgb(217 238 168 / 16%), transparent 45%),
+    linear-gradient(145deg, rgb(18 44 34 / 84%), rgb(10 27 20 / 88%));
+  --art-ring: rgb(217 238 168 / 12%);
+  --bezel-color: rgb(217 238 168 / 22%);
+
+  /* Dark-section card glass */
+  --dark-card-bg: linear-gradient(145deg, rgb(22 52 40 / 62%), rgb(12 30 23 / 52%));
+  --dark-card-border: rgb(217 238 168 / 14%);
+  --dark-card-specular: inset 0 1px 0 rgb(255 255 255 / 10%);
+  --line: rgb(217 238 168 / 12%);
+  --line-dark: rgb(217 238 168 / 13%);
+
+  /* Buttons */
+  --btn-primary-bg: linear-gradient(145deg, #dff2b2, #c4e285);
+  --btn-primary-hover: linear-gradient(145deg, #ebf9c8, #d2ec9a);
+  --btn-primary-text: #0b2118;
+  --btn-primary-shadow: 0 10px 26px rgb(0 0 0 / 32%), inset 0 1px 0 rgb(255 255 255 / 55%);
+
+  /* CTA box */
+  --cta-bg:
+    radial-gradient(circle at 85% 15%, rgb(217 238 168 / 22%), transparent 48%),
+    linear-gradient(135deg, rgb(25 63 47 / 88%), rgb(14 38 29 / 86%));
+  --cta-border: rgb(217 238 168 / 22%);
+  --cta-eyebrow: var(--lime);
+  --cta-heading: #f4faf5;
+
+  /* Modal & inputs */
+  --modal-backdrop: rgb(3 10 7 / 74%);
+  --input-bg: rgb(7 20 15 / 72%);
+  --input-border: rgb(217 238 168 / 20%);
+  --check-bg: rgb(217 238 168 / 18%);
+
+  --shadow: 0 24px 60px rgb(0 0 0 / 45%);
+  --shadow-screen: 0 30px 70px rgb(0 0 0 / 55%);
 }

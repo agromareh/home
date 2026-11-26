@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="AgroMareh turns crop observations into actionable intelligence for research institutions, agribusinesses and enterprise farms.">
-  <meta name="theme-color" content="#f7f8f2">
+  <meta name="theme-color" content="#eef4ea">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://home.agromareh.org/">
   <meta property="og:title" content="AgroMareh — Crop health, made actionable">
@@ -12,6 +12,17 @@
   <link rel="canonical" href="https://home.agromareh.org/">
   <link rel="icon" type="image/svg+xml" href="assets/icons/agromareh-mark.svg">
   <title>AgroMareh — Crop health, made actionable</title>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("agromareh-theme");
+        var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.dataset.theme = theme;
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="assets/css/tokens.css">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/sections.css">
@@ -30,9 +41,20 @@
         <a href="#institutions">Institutions</a>
         <a href="#about">About</a>
       </nav>
-      <button class="button" type="button" data-open-modal>
-        Talk to us <span aria-hidden="true">↗</span>
-      </button>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+        </button>
+        <button class="button" type="button" data-open-modal>
+          Talk to us <span aria-hidden="true">↗</span>
+        </button>
+      </div>
     </div>
   </header>
 

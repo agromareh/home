@@ -14,10 +14,13 @@ html {
 
 body {
   margin: 0;
-  background: var(--paper);
+  min-height: 100vh;
+  background: var(--page-bg);
+  background-attachment: fixed;
   color: var(--ink);
   font: 16px/1.6 var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  transition: color 0.25s ease, background 0.25s ease;
 }
 
 body.modal-open {
@@ -60,7 +63,7 @@ h3 {
 }
 
 :focus-visible {
-  outline: 3px solid #7c9f62;
+  outline: 3px solid var(--green-accent);
   outline-offset: 3px;
 }
 
@@ -87,6 +90,7 @@ h3 {
   height: 8px;
   border-radius: 50%;
   background: var(--green-accent);
+  box-shadow: 0 0 10px rgb(121 164 92 / 55%);
   content: "";
 }
 
@@ -100,35 +104,74 @@ h3 {
   padding: 0 20px;
   border: 1px solid transparent;
   border-radius: 999px;
-  background: var(--ink);
-  color: var(--white);
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
-  transition: transform 0.2s ease, background 0.2s ease;
+  box-shadow: var(--btn-primary-shadow);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .button:hover {
   transform: translateY(-2px);
-  background: var(--green);
+  background: var(--btn-primary-hover);
 }
 
 .button-light {
-  border-color: var(--line);
-  background: var(--white);
+  border-color: var(--glass-border);
+  background: var(--glass-bg-strong);
   color: var(--ink);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-specular), var(--glass-shadow);
 }
 
 .button-light:hover {
-  background: var(--green-soft);
-  color: var(--ink);
-}
-
-.button-lime {
-  background: var(--lime);
+  background: var(--glass-bg-hover);
   color: var(--ink-deep);
+  box-shadow: var(--glass-specular), var(--glass-shadow-hover);
 }
 
-.button-lime:hover {
-  background: var(--lime-hover);
+/* Theme toggle button */
+.theme-toggle {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  background: var(--glass-bg-strong);
+  color: var(--ink);
+  cursor: pointer;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-specular), var(--glass-shadow);
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  background: var(--glass-bg-hover);
+  color: var(--green);
+}
+
+.theme-toggle svg {
+  width: 19px;
+  height: 19px;
+  display: block;
+}
+
+.theme-toggle .icon-sun {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle .icon-sun {
+  display: block;
+}
+
+[data-theme="dark"] .theme-toggle .icon-moon {
+  display: none;
 }
