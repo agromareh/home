@@ -1,5 +1,5 @@
 (() => {
-  const CONTACT_EMAIL = "agromareh@gmail.com";
+  const CONTACT_EMAIL = "contactus@agromareh.org";
   const THEME_STORAGE_KEY = "agromareh-theme";
   const THEME_COLORS = {
     light: "#eef4ea",

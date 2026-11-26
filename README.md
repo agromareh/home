@@ -15,7 +15,7 @@
 
 <p align="center">
   <a href="https://home.agromareh.org">Website</a> ·
-  <a href="mailto:agromareh@gmail.com">Partnerships &amp; Pilots</a> ·
+  <a href="mailto:contactus@agromareh.org">Partnerships &amp; Pilots</a> ·
   <a href="tel:+2348141232871">+234 814 123 2871</a>
 </p>
 
@@ -70,7 +70,7 @@ AgroMareh is built for the organizations shaping the next generation of agricult
 We are actively partnering with **research institutions, enterprise farms, agribusinesses, ecosystem leaders, and strategic investors** who share our conviction that the future of agriculture is intelligent, connected, and data-driven.
 
 - **Website:** [home.agromareh.org](https://home.agromareh.org)
-- **Email:** [agromareh@gmail.com](mailto:agromareh@gmail.com)
+- **Email:** [contactus@agromareh.org](mailto:contactus@agromareh.org)
 - **Phone:** [+234 814 123 2871](tel:+2348141232871)
 
 ---
