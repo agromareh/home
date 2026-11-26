@@ -213,6 +213,21 @@
     justify-self: start;
   }
 
+  .supplier-banner-section {
+    padding-bottom: 52px;
+  }
+
+  .supplier-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 28px 24px;
+  }
+
+  .supplier-banner-actions {
+    align-items: flex-start;
+  }
+
   .footer {
     align-items: flex-start;
     flex-direction: column;
